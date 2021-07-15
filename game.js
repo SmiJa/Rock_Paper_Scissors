@@ -11,7 +11,7 @@ function compChoice() {
 }
 
 function randNum() {
-    return Math.floor((Math.random(2 - 0) + 0) * 3);
+    return Math.floor((Math.random() * 3));
 }
 
 function play(playerChoice) {
@@ -20,9 +20,23 @@ function play(playerChoice) {
 
     if (player === comp) {
         console.log("draw");
-    } else if (player === "rock" && comp === "paper" ) {
-        console.log("Computer Wins");
-    } else {
-        console.log("Player: " + player + " | " + "Comp: " + comp);
+    } else if (player === "rock") {
+        if (comp === "paper") {
+            console.log("Computer Wins");
+        } else {
+            console.log("Player Wins");
+        }
+    } else if (player === "paper") {
+        if (comp === "scissors") {
+            console.log("Computer Wins");
+        } else {
+            console.log("Player Wins");
+        }
+    } else if (player === "scissors") {
+        if (comp === "rock") {
+            console.log("Computer Wins");
+        } else {
+            console.log("Player Wins");
+        }
     }
 }
