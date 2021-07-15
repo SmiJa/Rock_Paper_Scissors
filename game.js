@@ -11,5 +11,18 @@ function compChoice() {
 }
 
 function randNum() {
-    return Math.random(2 - 0) + 0;
+    return Math.floor((Math.random(2 - 0) + 0) * 3);
+}
+
+function play(playerChoice) {
+    let player = playerChoice.trim().toLowerCase();
+    let comp = compChoice().toLowerCase();
+
+    if (player === comp) {
+        console.log("draw");
+    } else if (player === "rock" && comp === "paper" ) {
+        console.log("Computer Wins");
+    } else {
+        console.log("Player: " + player + " | " + "Comp: " + comp);
+    }
 }
