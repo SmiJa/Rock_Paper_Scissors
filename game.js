@@ -18,24 +18,32 @@ function play(playerChoice) {
     let player = playerChoice.trim().toLowerCase();
     let comp = compChoice().toLowerCase();
 
+        computerSelection.innerHTML = comp;
+
     if (player === comp) {
         console.log("draw");
     } else if (player === "rock") {
         if (comp === "paper") {
+            outcome.innerHTML = "Computer Wins";
             console.log("Computer Wins");
         } else {
+            outcome.innerHTML = "Computer Wins";
             console.log("Player Wins");
         }
     } else if (player === "paper") {
         if (comp === "scissors") {
+            outcome.innerHTML = "Player Wins";
             console.log("Computer Wins");
         } else {
+            outcome.innerHTML = "Player Wins";
             console.log("Player Wins");
         }
     } else if (player === "scissors") {
         if (comp === "rock") {
+            outcome.innerHTML = "Computer Wins";
             console.log("Computer Wins");
         } else {
+            outcome.innerHTML = "Player Wins";
             console.log("Player Wins");
         }
     }
