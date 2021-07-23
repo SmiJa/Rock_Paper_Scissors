@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -18,20 +19,26 @@
         </header>
         <div id="game">
             <header id="game-header">
-                <h2>Make a choice:</h2>
+                <p>
+                    Player choice: <span id="player-choice-output"></span>
+                </p>
             </header>
             <div id="player-selection">
-                <div class="items" id="item-1" onclick="play(this.innerHTML)">
-                    Rock
+                <div class="items" id="rock" onclick="play(this)">
+                    <i class="far fa-hand-rock"></i>
                 </div>
-                <div class="items" id="item-2" onclick="play(this.innerHTML)">
-                    Paper
+                <div class="items" id="paper" onclick="play(this)">
+                    <i class="far fa-hand-paper"></i>
                 </div>
-                <div class="items" id="item-3" onclick="play(this.innerHTML)">
-                    Scissors
+                <div class="items" id="scissors" onclick="play(this)">
+                    <i class="far fa-hand-scissors"></i>
                 </div>
             </div>
-            <div id="computer-selection"></div>
+            <div id="computer-selection">
+                <p>
+                    Computer choice: <span id="computer-selection-output"></span>
+                </p>
+            </div>
             <div id="outcome"></div>
         </div>
     </div>

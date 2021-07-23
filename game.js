@@ -1,8 +1,11 @@
-const playerRock = document.getElementById("item-1");
-const playerPaper = document.getElementById("item-2");
-const playerScissors = document.getElementById("item-3");
-const computerSelection = document.getElementById("computer-selection");
+const playerRock = document.getElementById("rock");
+const playerPaper = document.getElementById("paper");
+const playerScissors = document.getElementById("scissors");
+const computerSelection = document.getElementById("computer-selection-output");
+const playerSelection = document.getElementById("player-choice-output");
 const outcome = document.getElementById("outcome");
+const playerWins = "Player Wins";
+const computerWins = "Computer Wins";
 
 function compChoice() {
     let choices = ["Rock", "Paper", "Scissors"];
@@ -15,35 +18,36 @@ function randNum() {
 }
 
 function play(playerChoice) {
-    let player = playerChoice.trim().toLowerCase();
+    let player = playerChoice.id;
     let comp = compChoice().toLowerCase();
 
-        computerSelection.innerHTML = comp;
+    computerSelection.innerHTML = comp;
+    playerSelection.innerHTML = player;
 
     if (player === comp) {
         console.log("draw");
     } else if (player === "rock") {
         if (comp === "paper") {
-            outcome.innerHTML = "Computer Wins";
+            outcome.innerHTML = computerWins;
             console.log("Computer Wins");
         } else {
-            outcome.innerHTML = "Computer Wins";
+            outcome.innerHTML = playerWins;
             console.log("Player Wins");
         }
     } else if (player === "paper") {
         if (comp === "scissors") {
-            outcome.innerHTML = "Player Wins";
+            outcome.innerHTML = computerWins;
             console.log("Computer Wins");
         } else {
-            outcome.innerHTML = "Player Wins";
+            outcome.innerHTML = playerWins;
             console.log("Player Wins");
         }
     } else if (player === "scissors") {
         if (comp === "rock") {
-            outcome.innerHTML = "Computer Wins";
+            outcome.innerHTML = computerWins;
             console.log("Computer Wins");
         } else {
-            outcome.innerHTML = "Player Wins";
+            outcome.innerHTML = playerWins;
             console.log("Player Wins");
         }
     }
