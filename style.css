@@ -20,7 +20,7 @@ body {
 }
 
 #game-wrap {
-    width: 600px;
+    max-width: 600px;
     margin: auto;
 }
 
@@ -73,4 +73,17 @@ body {
     font-weight: 700;
     font-size: 3rem;
     color: #cdcdcd;
+}
+
+@media (max-width: 500px) {
+    #main-header {
+        font-size: 1.6rem;
+    }
+    
+    .items {
+        font-size: 2rem;
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+    }
 }

@@ -14,7 +14,8 @@ function compChoice() {
 }
 
 function randNum() {
-    return Math.floor((Math.random() * 3));
+    // return Math.floor((Math.random() * 3));
+    rando(0,2);
 }
 
 function play(playerChoice) {
@@ -25,6 +26,7 @@ function play(playerChoice) {
     playerSelection.innerHTML = player;
 
     if (player === comp) {
+        outcome.innerHTML = "Draw";
         console.log("draw");
     } else if (player === "rock") {
         if (comp === "paper") {
