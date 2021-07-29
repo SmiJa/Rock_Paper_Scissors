@@ -14,8 +14,7 @@ function compChoice() {
 }
 
 function randNum() {
-    // return Math.floor((Math.random() * 3));
-    rando(0,2);
+    return Math.floor((Math.random() * 3));
 }
 
 function play(playerChoice) {
